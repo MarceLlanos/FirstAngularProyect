@@ -1,0 +1,22 @@
+<div class="wrapper" id="wrapper">
+  <div class="ibox-content text-center">
+    <h1>Lista de usuarios</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let users of usersArray; let i=index">
+        <div class="card">
+          <img src="{{users.photo}}" class="card-img-top" alt="150">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{users.name}}</h5>
+          <div class="form-group">
+            <button (click)="goToRepository(users.url)" class="btn btn-primary">Ir a Github</button>
+            <button class="btn btn-white">Ver Repositorios</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
